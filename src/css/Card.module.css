@@ -1,0 +1,33 @@
+.wrapper {
+
+}
+
+.header {
+    font-size: 20px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+}
+
+.image:hover {
+    opacity: .6;
+}
+
+.desc {
+    font-size: 15px;
+    font-family: "Droid Sans", sans-serif;
+    color: antiquewhite;
+    margin: 0;
+    text-align: justify;
+}
+
+.price {
+    margin: 5px;
+    font-size: 14px;
+    font-family: Didot, sans-serif;
+    color: antiquewhite;
+}

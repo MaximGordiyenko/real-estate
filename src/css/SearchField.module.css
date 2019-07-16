@@ -1,0 +1,30 @@
+.wrapper {
+    background: black;
+}
+
+.input {
+    width: 200px;
+    height: 20px;
+
+}
+
+.input[type=text] {
+    font-size: 18px;
+    border: none;
+    background-color: #250a0a;
+    color: antiquewhite;
+}
+
+.input::after{
+    content: '\1F50E';
+}
+@media only screen and (max-width: 375px) {
+    .wrapper {
+        /*margin: 0 20px;*/
+    }
+
+    .input {
+        width: 90vw;
+        margin: 0 20px;
+    }
+}

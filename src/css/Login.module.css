@@ -1,0 +1,9 @@
+.wrapper{
+    background: black;
+    color: aliceblue;
+}
+.form{
+    display: inline-grid;
+    grid-row-gap: 10px;
+
+}

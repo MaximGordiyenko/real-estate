@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Link, Route} from 'react-router-dom'
+import Logo from "./Components/Head/Logo";
+import CardsPage from "./Components/Card/CardsPage";
+import Home from "./Components/Head/Home";
+import Shop from "./Components/Head/Shop";
+import {LoginForm} from "./Components/Login/LoginForm";
+import style from "../src/css/App.module.css";
+import Breadcrumbs from "./Components/Head/Breadcrumbs";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ul className={style.ul}>
+        <li><Link to='/'><nav className={style.logo}><Logo/></nav></Link></li>
+        <li className={style.li}><Link to='/movies' className={style.link}>Movies</Link></li>
+        <li><Link to='/home' className={style.link}>Home</Link></li>
+        <li><Link to='/shop' className={style.link}>Shop</Link></li>
+        <li><Link to='/login' className={style.link}>Login</Link></li>
+      </ul>
+        <Breadcrumbs/>
+      <Route exact path='/' component={CardsPage}/>
+      <Route path='/movies' component={CardsPage}/>
+      <Route path='/home' component={Home}/>
+      <Route path='/shop' component={Shop}/>
+      <Route path='/login' component={LoginForm}/>
+    </Router>
   );
 }
 

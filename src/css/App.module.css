@@ -1,0 +1,27 @@
+.ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.li {
+    color: antiquewhite;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    background: black;
+}
+
+.link {
+    font-size: 20px;
+    text-decoration: none;
+    color: antiquewhite;
+    margin: 10px;
+}
