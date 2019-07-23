@@ -3,28 +3,27 @@ import React from 'react';
 import movies from "../../api/movies";
 
 const CardView = ({match}) => {
+    const matchId = Number(Object.values(match.params));
     const itemList = movies.map(e => e);
     let found_object = null;
-    const matchId = Number(Object.values(match.params.id));
-
     itemList.forEach((item) => {
         if (item.id === matchId) {
-            console.log(found_object.image); //  poster/SPECTACULAR-OCEANFRONT.jpg
             found_object = item;
         }
     });
     if (found_object === null) {
         return null;
     }
+    const {releaseDate, description, title, price, location, image} = found_object;
     return (
-      <div>
-          <p>{found_object.releaseDate}</p>
-          <p>{found_object.description}</p>
-          <h2>{found_object.title}</h2>
-          <p>{found_object.price}</p>
-          <p>{found_object.location}</p>
-          <img src={found_object.image} alt={found_object.title}/>
-      </div>
+      <>
+          <p>{releaseDate}</p>
+          <p>{description}</p>
+          <h2>{title}</h2>
+          <p>{price}</p>
+          <p>{location}</p>
+          <img src={image} alt={found_object.title}/>
+      </>
     )
 };
 
