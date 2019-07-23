@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+/.idea/
+/public/favicon.ico
+/public/manifest.json
+/src/logo.svg
+/src/App.test.js
+/.gitignore
