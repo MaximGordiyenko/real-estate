@@ -22,13 +22,7 @@ function App() {
           <Breadcrumbs/>
           <Switch>
               <Route exact path='/movies' component={CardsPage}/>
-              <Route path='/movies/:id' component={(routeProps) =>
-                <CardView title={routeProps}
-                          image={routeProps}
-                          description={routeProps}
-                          price={routeProps}
-                          {...routeProps} />
-              }/>
+              <Route path='/movies/:id' component={(routeProps) => <CardView {...routeProps} />}/>
               <Route path='/map' component={Map}/>
               <Route path='/login' component={LoginForm}/>
           </Switch>
