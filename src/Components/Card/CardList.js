@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Route} from 'react-router-dom';
 import style from '../../css/CardList.module.css';
-import Movie from "./Movie";
+// import Movie from "./Movie";
 import Card from "./Card";
 
 const CardList = ({movies, match}) => {
@@ -20,7 +20,7 @@ const CardList = ({movies, match}) => {
                 </Link>
               ))}
           </div>
-          <Route path={`${match.path}/:moveId`} component={Movie}/>
+          {/*<Route path={`${match.path}/:moveId`} component={Movie}/>*/}
       </>
     );
 };

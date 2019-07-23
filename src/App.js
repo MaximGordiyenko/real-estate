@@ -1,32 +1,39 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import Logo from "./Components/Head/Logo";
 import CardsPage from "./Components/Card/CardsPage";
-import Home from "./Components/Head/Home";
-import Shop from "./Components/Head/Shop";
+import Map from "./Components/Head/Map";
 import {LoginForm} from "./Components/Login/LoginForm";
 import style from "../src/css/App.module.css";
 import Breadcrumbs from "./Components/Head/Breadcrumbs";
+import CardView from "./Components/Card/CardView";
 
 
 function App() {
-  return (
-    <Router>
-      <ul className={style.ul}>
-        <li><Link to='/'><nav className={style.logo}><Logo/></nav></Link></li>
-        <li className={style.li}><Link to='/movies' className={style.link}>Movies</Link></li>
-        <li><Link to='/home' className={style.link}>Home</Link></li>
-        <li><Link to='/shop' className={style.link}>Shop</Link></li>
-        <li><Link to='/login' className={style.link}>Login</Link></li>
-      </ul>
-        <Breadcrumbs/>
-      <Route exact path='/' component={CardsPage}/>
-      <Route path='/movies' component={CardsPage}/>
-      <Route path='/home' component={Home}/>
-      <Route path='/shop' component={Shop}/>
-      <Route path='/login' component={LoginForm}/>
-    </Router>
-  );
+    return (
+      <Router>
+          <ul className={style.ul}>
+              <li><span className={style.logo}><Logo/></span></li>
+              <li className={style.li}><Link to='/movies' className={style.link}>Movies</Link></li>
+              <li><Link to='/home' className={style.link}>Home</Link></li>
+              <li><Link to='/map' className={style.link}>Map</Link></li>
+              <li><Link to='/login' className={style.link}>Login</Link></li>
+          </ul>
+          <Breadcrumbs/>
+          <Switch>
+              <Route exact path='/movies' component={CardsPage}/>
+              <Route path='/movies/:id' component={(routeProps) =>
+                <CardView title={routeProps}
+                          image={routeProps}
+                          description={routeProps}
+                          price={routeProps}
+                          {...routeProps} />
+              }/>
+              <Route path='/map' component={Map}/>
+              <Route path='/login' component={LoginForm}/>
+          </Switch>
+      </Router>
+    );
 }
 
 export default App;

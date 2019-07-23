@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Shop = () => (
+export const Map = () => (
     <div>
         <h1>Shop</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci atque culpa dolorem hic iusto,
@@ -8,4 +8,4 @@ export const Shop = () => (
     </div>
 );
 
-export default Shop;
+export default Map;
