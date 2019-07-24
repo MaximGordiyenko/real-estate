@@ -3,36 +3,52 @@ import style from '../../css/Navbar.module.css';
 import Logo from "./Logo";
 import {Link} from "react-router-dom";
 
-const Navbar = () => (
-  <ul className={style.ul}>
-    <li>
-      <Link to='/'>
-        <nav className={style.logo}>
-          <Logo/>
-        </nav>
-      </Link>
-    </li>
-    <li className={style.li}>
-      <Link to='/' className={style.link}>
-        Movies
-      </Link>
-    </li>
-    <li>
-      <Link to='/blog' className={style.link}>
-        Blog
-      </Link>
-    </li>
-    <li>
-      <Link to='/shop' className={style.link}>
-        Shop
-      </Link>
-    </li>
-    <li>
-      <Link to='/login' className={style.link}>
-        Login
-      </Link>
-    </li>
-  </ul>
-);
+const Navbar = () => {
+    return (
+      <nav className={style.nav}>
+          <ul className={style.ul}>
+              <li><span className={style.logo}><Logo/></span></li>
+              <span className={style.separator}>|</span>
+              <li className={style.li}>
+                  <Link to='/movies' className={style.link}>Movies</Link>
+                  <div className={style.dropdown}>
+                      <button className={style.dropbtn}>&#10148;</button>
+                      <div className={style.dropdownContent}>
+                          <Link to="">Link 1</Link>
+                          <Link to="">Link 2</Link>
+                          <Link to="">Link 3</Link>
+                      </div>
+                  </div>
+              </li>
+              <span className={style.separator}>|</span>
+              <li>
+                  <Link to='/home' className={style.link}>Home</Link>
+                  <div className={style.dropdown}>
+                      <button className={style.dropbtn}>&#10148;</button>
+                      <div className={style.dropdownContent}>
+                          <Link to="">Link 1</Link>
+                          <Link to="">Link 2</Link>
+                          <Link to="">Link 3</Link>
+                      </div>
+                  </div>
+              </li>
+              <span className={style.separator}>|</span>
+              <li>
+                  <Link to='/map' className={style.link}>Map</Link>
+                  <div className={style.dropdown}>
+                      <button className={style.dropbtn}>&#10148;</button>
+                      <div className={style.dropdownContent}>
+                          <Link to="">Link 1</Link>
+                          <Link to="">Link 2</Link>
+                          <Link to="">Link 3</Link>
+                      </div>
+                  </div>
+              </li>
+              <span className={style.separator}>|</span>
+              <li><Link to='/login' className={style.link}>Login</Link></li>
+          </ul>
+      </nav>
+    );
+};
 
 export default Navbar;
