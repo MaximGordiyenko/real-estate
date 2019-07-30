@@ -1,18 +1,18 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-// import Logo from "./Components/Head/Logo";
 import CardsPage from "./Components/Card/CardsPage";
 import Map from "./Components/Head/Map";
 import {LoginForm} from "./Components/Login/LoginForm";
-// import style from "../src/css/App.module.css";
 import Breadcrumbs from "./Components/Head/Breadcrumbs";
 import CardView from "./Components/Card/CardView";
 import Navbar from "./Components/Head/Navbar";
+import Carousel from "./Components/Carousel/Carousel";
 
 
 function App() {
     return (
       <Router>
+          <Carousel/>
           <Navbar/>
           <Breadcrumbs/>
           <Switch>

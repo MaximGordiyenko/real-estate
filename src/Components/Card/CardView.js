@@ -3,7 +3,7 @@ import style from "../../css/CardView.module.css";
 import movies from "../../api/movies";
 
 const CardView = ({match}) => {
-    const matchId = Number(Object.values(match.params));
+    let matchId = Number(Object.values(match.params));
     const itemList = movies.map(e => e);
     let found_object = null;
     itemList.forEach((item) => {
