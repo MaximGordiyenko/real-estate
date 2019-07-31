@@ -8,6 +8,13 @@
     "location": "Bridgehampton South, Bridgehampton, New York, 11932 United States ",
     "price": "$1,200 000",
     "trailerPath": "https://www.youtube.com/embed/6hB3S9bIaco",
+    "city": "Singer",
+    "address": "914 Argyle Road",
+    "latitude": -33.944576,
+    "longitude": 151.25584,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "carSpaces": 2,
     "favorite": false
   },
   {
@@ -19,6 +26,13 @@
     "location": "Andratx, Mallorca, Spain",
     "price": "$1,090 333",
     "trailerPath": "https://www.youtube.com/embed/uPIEn0M8su0",
+    "city": "Machias",
+    "address": "255 Raleigh Place",
+    "latitude": -33.944471,
+    "longitude": 151.2541,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -30,6 +44,13 @@
     "location": "1500 Ocean Dr 1010, Miami Beach, Florida, 33139 United States",
     "price": "$8,050 000",
     "trailerPath": "https://www.youtube.com/embed/RYExstiQlLc",
+    "city": "Bend",
+    "address": "580 Amber Street",
+    "latitude": -33.944644,
+    "longitude": 151.24834,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -41,6 +62,13 @@
     "location": " 40 Dune Road, Bridgehampton South, Bridgehampton, New York, 11932 United States ",
     "price": " $3,424 444 ",
     "trailerPath": "https://www.youtube.com/embed/8hf4hceY5Xg",
+    "city": "Ivanhoe",
+    "address": "854 Varanda Place",
+    "latitude": -33.940396,
+    "longitude": 151.2469,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -52,6 +80,13 @@
     "location": "205 Surfside Drive, Bridgehampton South, Bridgehampton, New York, 11932 United States",
     "price": "$60,000 000",
     "trailerPath": "https://www.youtube.com/embed/dC1yHLp9bWA",
+    "city": "Lydia",
+    "address": "857 Rockaway Parkway",
+    "latitude": -33.944562,
+    "longitude": 151.2503,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "carSpaces": 1,
     "favorite": false
   },
   {
@@ -63,6 +98,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Rosedale",
+    "address": "543 Harman Street",
+    "latitude": -33.939304,
+    "longitude": 151.25046,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "carSpaces": 1,
     "favorite": false
   },
   {
@@ -74,6 +116,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Allison",
+    "address": "787 Gerald Court",
+    "latitude": -33.937819,
+    "longitude": 151.25774,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "carSpaces": 2,
     "favorite": false
   },
   {
@@ -85,6 +134,13 @@
     "location": "Andratx, Mallorca, Spain",
     "price": "$1,090 333",
     "trailerPath": "https://www.youtube.com/embed/uPIEn0M8su0",
+    "city": "Nicut",
+    "address": "416 Vandervoort Avenue",
+    "latitude": -33.943154,
+    "longitude": 151.24687,
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "carSpaces": 1,
     "favorite": false
   },
   {
@@ -96,6 +152,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Canterwood",
+    "address": "437 Mill Street",
+    "latitude": -33.943723,
+    "longitude": 151.25278,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -107,7 +170,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
-    "favorite": false
+    "city": "Blue",
+    "address": "687 Opal Court",
+    "latitude": -33.939606,
+    "longitude": 151.25289,
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "carSpaces": 2
   },
   {
     "id": 11,
@@ -118,6 +187,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Craig",
+    "address": "183 Canton Court",
+    "latitude": -33.938557,
+    "longitude": 151.24773,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -140,6 +216,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Orovada",
+    "address": "234 Prospect Street",
+    "latitude": -33.938345,
+    "longitude": 151.25045,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -151,6 +234,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Clay",
+    "address": "205 Ocean Parkway",
+    "latitude": -33.937763,
+    "longitude": 151.24721,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "carSpaces": 2,
     "favorite": false
   },
   {
@@ -162,6 +252,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Windsor",
+    "address": "324 Degraw Street",
+    "latitude": -33.938662,
+    "longitude": 151.2513,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "carSpaces": 2,
     "favorite": false
   },
   {
@@ -184,6 +281,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Bluetown",
+    "address": "644 Ashford Street",
+    "latitude": -33.940989,
+    "longitude": 151.25156,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -206,6 +310,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Wakulla",
+    "address": "472 Wilson Street",
+    "latitude": -33.943395,
+    "longitude": 151.24723,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "carSpaces": 1,
     "favorite": false
   },
   {
@@ -217,6 +328,13 @@
     "location": "Bridgehampton South, Bridgehampton, New York, 11932 United States ",
     "price": "$1,200 000",
     "trailerPath": "https://www.youtube.com/embed/6hB3S9bIaco",
+    "city": "Greer",
+    "address": "455 Crown Street",
+    "latitude": -33.941819,
+    "longitude": 151.25784,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "carSpaces": 0,
     "favorite": false
   },
   {
@@ -228,6 +346,13 @@
     "location": " 135 Crestview Lane, Sagaponack South, Sagaponack, New York, 11962 United States ",
     "price": "$800,000 000",
     "trailerPath": "https://www.youtube.com/embed/lTmlYKiLBHI",
+    "city": "Wright",
+    "address": "459 Duffield Street",
+    "latitude": -33.940486,
+    "longitude": 151.25562,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "carSpaces": 1,
     "favorite": false
   },
   {
@@ -239,6 +364,13 @@
     "location": "Bridgehampton South, Bridgehampton, New York, 11932 United States ",
     "price": "$1,200 000",
     "trailerPath": "https://www.youtube.com/embed/6hB3S9bIaco",
+    "city": "Manchester",
+    "address": "537 Gelston Avenue",
+    "latitude": -33.942826,
+    "longitude": 151.24943,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "carSpaces": 0,
     "favorite": false
   }
 ]

@@ -5,7 +5,7 @@
     cursor: pointer;
     background-color: #f3f3f3;
     padding: 10px;
-    max-width: 220px;
+    max-width: 250px;
     text-align: left;
     margin: 0 auto;
 }
@@ -63,17 +63,22 @@
     display: none;
 }
 
-.card .features li.icon-bed {
+.card .features li.iconBed {
     background-size: auto 100%;
     background: url(../assets/bed-left-side.svg) no-repeat left center;
 }
 
-.card .features li.icon-bath {
+.card .features li.iconBath {
     background-size: auto 100%;
     background: url(../assets/bathtub.svg) no-repeat;
 }
 
-.card .features li.icon-car {
+.card .features li.iconCar {
     background-size: auto 100%;
     background: url(../assets/car-compact.svg) no-repeat;
+}
+
+.card .features li.iconLoc {
+    background-size: auto 100%;
+    background: url(../assets/house-location-pin.svg) no-repeat;
 }

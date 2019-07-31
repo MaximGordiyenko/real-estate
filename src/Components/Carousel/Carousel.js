@@ -26,30 +26,33 @@ class Carousel extends Component {
 
     render() {
         const item = this.state.data[this.state.index];
-        console.log('item', item);
-        console.log('this.state.pos', this.state.index);
+        let keys = [];
+        keys.push(item);
+
         return (
           <div className={style.carousel}>
-              <button onClick={() => this.prevProperty()}
+              <button className={style.prevBnt}
+                      onClick={() => this.prevProperty()}
                       disabled={this.state.index === 0}
               >Prev
               </button>
 
-              <button onClick={() => this.nextProperty()}
+              <button className={style.nextBtn}
+                      onClick={() => this.nextProperty()}
                       disabled={this.state.index === this.state.data.length - 1}
               >Next
               </button>
 
               <div className={style.col}>
-                  <div className={`cards-slider active-slide-${this.state.index}`}>
-                      <div className="cards-slider-wrapper" style={{
-                          'transform': `translateX( - ${this.state.index * (100 / this.state.data.length)} % )`
+                  <div className={`style.cardsSlider style.activeSlide-${this.state.index}`}>
+                      <div className={style.cardsSliderWrapper} style={{
+                          'transform': `translateX( - ${this.state.index * (100 / this.state.data.length)}%)`
                       }}>
-                          {item.map(property =>
+                          {keys.map(property =>
                             <CarouselItem key={property.id}
                                           property={property}
                             />
-                            )}
+                          )}
                       </div>
                   </div>
               </div>

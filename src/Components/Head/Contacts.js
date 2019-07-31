@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Map = () => (
+export const Contacts = () => (
     <div>
         <h1>Shop</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci atque culpa dolorem hic iusto,
@@ -8,4 +8,4 @@ export const Map = () => (
     </div>
 );
 
-export default Map;
+export default Contacts;

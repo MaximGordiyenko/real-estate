@@ -34,7 +34,7 @@ const Navbar = () => {
               </li>
               <span className={style.separator}>|</span>
               <li>
-                  <Link to='/map' className={style.link}>Map</Link>
+                  <Link to='/contacts' className={style.link}>Contacts</Link>
                   <div className={style.dropdown}>
                       <button className={style.dropbtn}>&#10148;</button>
                       <div className={style.dropdownContent}>

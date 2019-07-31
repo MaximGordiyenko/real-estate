@@ -1,8 +1,33 @@
 .carousel {
     text-align: center;
     position: relative;
+    padding-bottom: 55px;
 }
 
+.prevBnt {
+    width: 50px;
+    height: 280px;
+    position: absolute;
+    top: calc(100% - 300px);
+    left: 20px;
+    color: black;
+    z-index: 3;
+    border-radius: 10px;
+}
+
+.nextBtn {
+    width: 50px;
+    height: 280px;
+    position: absolute;
+    top: calc(100% - 300px);
+    right: 20px;
+    color: black;
+    z-index: 3;
+    border-radius: 10px;
+}
+.nextBtn:hover{
+    background: blueviolet;
+}
 .cards-slider-wrapper {
     display: flex;
     position: absolute;
