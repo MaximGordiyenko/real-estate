@@ -4,6 +4,7 @@ import style from '../../css/FilterForm.module.css';
 const FilterForm = ({filter, handleFilter}) => {
     return (
         <div className={style.wrapper}>
+            <label className={style.label}>Filter:</label>
             <input className={style.input}
                    type="search"
                    value={filter}

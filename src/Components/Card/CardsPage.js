@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import FilterForm from "../Search/FilterForm";
-import {filterByTitle} from "../../utils/filterMovie";
 import CardList from "./CardList";
 import Carousel from "../Carousel/Carousel";
 import data from "../../api/movies";
 import style from '../../css/CardsPage.module.css'
+import ScrollButton from "../ScrollButton";
+import Sort from "../Sort";
 
 class CardsPage extends Component {
     state = {
@@ -31,7 +32,7 @@ class CardsPage extends Component {
         const {data, currentPage, cardsPerPage} = this.state;
         const indexOfLastTodo = currentPage * cardsPerPage;
         const indexOfFirstTodo = indexOfLastTodo - cardsPerPage;
-        const currentTodos = data.map(item => item).slice(indexOfFirstTodo, indexOfLastTodo);
+        const currentItems = data.map(item => item).slice(indexOfFirstTodo, indexOfLastTodo);
         const pageNumbers = [];
         for (let i = 1; i <= Math.ceil(data.length / cardsPerPage); i++) {
             pageNumbers.push(i);
@@ -48,17 +49,21 @@ class CardsPage extends Component {
             );
         });
 
-        const {filter} = this.state;
-        // const filterTitle = filterByTitle(filter);
+        const filterByTitle = (item) =>
+          currentItems.filter(movies =>
+            movies.title.toLocaleLowerCase().includes(item.toLowerCase()));
 
+        const {filter} = this.state;
         return (
           <>
               <Carousel/>
               <FilterForm filter={filter}
                           handleFilter={this.handleFilter}
-                          handlePagination={this.handlePagination}
+
               />
-              <CardList movies={currentTodos}
+              {/*<Sort/>*/}
+              <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
+              <CardList movies={filterByTitle(filter)}
                         match={this.props.match}
               />
               <div className={style.centerPagination}>

@@ -1,0 +1,29 @@
+.infoWindow {
+    width: 210px;
+    height: 200px;
+}
+
+.infoTitle {
+    color: #282c34;
+}
+
+.infoTitle:hover {
+    color: #4CAF50;
+}
+
+.infoText {
+    text-overflow: ellipsis; /*trim text by three dot*/
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.infoImage {
+    width: 200px;
+    height: 130px;
+    padding: 0 8px;
+}
+
+.mapWrapper{
+    width: 100vw;
+    height: 50vh;
+}

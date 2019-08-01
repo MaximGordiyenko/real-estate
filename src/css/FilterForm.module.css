@@ -2,10 +2,20 @@
     background: black;
 }
 
+.label {
+    color: #dddddd;
+    margin: 0 10px;
+    /*animation-name: example;*/
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
 input[type="search"] {
     background: #FFF;
     padding: 1px 1px 1px 5px;
-    position: relative; top: 0; left: 0;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 178px;
     height: 21px;
     outline: none;
@@ -16,6 +26,7 @@ input[type="search"] {
     transition: all .5s;
 
 }
+
 input[type="search"]:focus {
     background: #FFF;
     padding: 1px 1px 1px 5px;
@@ -24,6 +35,25 @@ input[type="search"]:focus {
     border: 1px solid #CCCCCC;
     top: 0;
     right: 100%;
+
+}
+
+@keyframes example {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: blue;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: red;
+    }
 }
 
 @media only screen and (max-width: 375px) {

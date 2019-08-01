@@ -75,10 +75,10 @@
 
 .card .features li.iconCar {
     background-size: auto 100%;
-    background: url(../assets/car-compact.svg) no-repeat;
+    background: url(../assets/car.svg) no-repeat;
 }
 
 .card .features li.iconLoc {
     background-size: auto 100%;
-    background: url(../assets/house-location-pin.svg) no-repeat;
+    background: url(../assets/map.svg) no-repeat;
 }
