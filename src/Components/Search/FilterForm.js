@@ -1,12 +1,14 @@
 import React from 'react';
-import style from '../../css/SearchField.module.css';
+import style from '../../css/FilterForm.module.css';
 
 const FilterForm = ({filter, handleFilter}) => {
     return (
         <div className={style.wrapper}>
+            <label className={style.label}>Filter:</label>
             <input className={style.input}
-                   type="text"
+                   type="search"
                    value={filter}
+                   placeholder='Please, type the rent or apartment'
                    onChange={handleFilter}
             />
         </div>

@@ -1,32 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route} from 'react-router-dom'
-import Logo from "./Components/Head/Logo";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import CardsPage from "./Components/Card/CardsPage";
-import Home from "./Components/Head/Home";
-import Shop from "./Components/Head/Shop";
 import {LoginForm} from "./Components/Login/LoginForm";
-import style from "../src/css/App.module.css";
 import Breadcrumbs from "./Components/Head/Breadcrumbs";
+import CardView from "./Components/Card/CardView";
+import Navbar from "./Components/Head/Navbar";
+import Contacts from "./Components/Head/Contacts";
+import Services from "./Components/Head/Services";
 
 
 function App() {
-  return (
-    <Router>
-      <ul className={style.ul}>
-        <li><Link to='/'><nav className={style.logo}><Logo/></nav></Link></li>
-        <li className={style.li}><Link to='/movies' className={style.link}>Movies</Link></li>
-        <li><Link to='/home' className={style.link}>Home</Link></li>
-        <li><Link to='/shop' className={style.link}>Shop</Link></li>
-        <li><Link to='/login' className={style.link}>Login</Link></li>
-      </ul>
-        <Breadcrumbs/>
-      <Route exact path='/' component={CardsPage}/>
-      <Route path='/movies' component={CardsPage}/>
-      <Route path='/home' component={Home}/>
-      <Route path='/shop' component={Shop}/>
-      <Route path='/login' component={LoginForm}/>
-    </Router>
-  );
+    return (
+      <Router>
+          <Navbar/>
+          <Breadcrumbs/>
+          <Switch>
+              <Route exact path='/movies' component={CardsPage}/>
+              <Route path='/movies/:id' component={(routeProps) => <CardView {...routeProps} />}/>
+              <Route path='/contacts' component={Contacts}/>
+              <Route path='/services' component={Services}/>
+              <Route path='/login' component={LoginForm}/>
+          </Switch>
+      </Router>
+    );
 }
 
 export default App;

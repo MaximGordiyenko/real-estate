@@ -1,5 +1,5 @@
-import movies from "../api/movies";
+import data from "../api/movies";
 
 export const filterByTitle = (item) =>
-    movies.filter(movies =>
+    data.filter(movies =>
         movies.title.toLocaleLowerCase().includes(item.toLowerCase()));
