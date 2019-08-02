@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom';
 import style from '../../css/CardList.module.css';
 import Card from "./Card";
 
-const CardList = ({movies, match}) => {
+const CardList = ({data, match}) => {
     return (
       <>
           <div className={style.list}>
-              {movies.map(({id, title, image, description, price}) => (
+              {data.map(({id, title, image, description, price}) => (
                 <Link className={style.item}
                       to={`${match.url}/${id}`}
                       key={id}>

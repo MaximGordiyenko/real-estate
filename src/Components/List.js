@@ -1,26 +1,33 @@
 import React from 'react';
+import style from '.././css/Sort.module.css';
 
 const List = ({data, orderBy}) => {
-    // const { data, orderBy } = this.props;
     console.log('data', data, 'orderBy', orderBy);
-    const categories = ["company","job","city","gender"]
-    const input = categories; // array from the bottom of this script
-    const output = input.map((item)=>{
-        return <div><small className={ orderBy === item ? "active" : null }>{item}:</small> {data[item] }</div>
+    const categories = ["title", "price", "city", "address"];
+    const output = categories.map((item) => {
+        console.log('list dataItem', data[item]);
+        return <div key={item}>
+            <small className={orderBy === item ? style.active : null}
+            >{item}:
+            </small>
+            {data[item]}
+        </div>
     });
     return (
       <div className="media">
           <div className="media-left">
-              <img className="media-object" src={ data.img } alt={`${data.first_name} ${data.last_name}` } />
+              <img className={style.image}
+                   src={data.image}
+                   alt={`${data.title}`}/>
           </div>
           <div className="media-body">
               <h4 className="media-heading">
-                  <span className={ orderBy === "first_name" ? "active" : null }>{ data.first_name } </span>
-                  <span className={ orderBy === "last_name" ? "active" : null }>{ data.last_name }</span>
+                  <span className={orderBy === "city" ? style.active : null}>{data.city} </span>
+                  <span className={orderBy === "title" ? style.active : null}>{data.title}</span>
               </h4>
-              <div><small>about:</small> { data.about }</div>
+              <div><small>description:</small> {data.description}</div>
               {output}
-              <div><small>email:</small> <a href={ data.email }> { data.email } </a></div>
+              <div><small>address:</small> <a href={data.address}> {data.address} </a></div>
           </div>
       </div>
     );

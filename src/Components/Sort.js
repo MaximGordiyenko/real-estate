@@ -3,31 +3,40 @@ import data from '../api/movies';
 import Dropdawn from "./Dropdawn";
 import List from "./List";
 
+// import {_} from 'lodash';
+
 class Sort extends Component {
     state = {
         data: data, // array of objects
-        orderBy: "first_name",
+        orderBy: "id",
         order: "asc",
         dropdownActive: true
     };
 
-    toggle(e){
+    toggle(e) {
         e.preventDefault();
         let isActive = this.state.dropdownActive;
         isActive = !isActive;
-        this.setState({dropdownActive: isActive});
+        this.setState({
+            dropdownActive: isActive
+        });
     }
 
-    doOrderBy(e){
+    doOrderBy(e) {
         e.preventDefault();
         const newOrderBy = e.target.getAttribute('data-value');
-        this.setState({orderBy : newOrderBy});
+        console.log('newOrderBy', newOrderBy);
+        this.setState({
+            orderBy: newOrderBy
+        });
     }
 
-    doOrder(e){
+    doOrder(e) {
         e.preventDefault();
         const newOrder = e.target.getAttribute('data-value');
-        this.setState({order : newOrder});
+        this.setState({
+            order: newOrder
+        });
     }
 
     render() {
@@ -36,28 +45,26 @@ class Sort extends Component {
         let sorted = this.state.data;
 
         // sorted = _.orderBy(sorted, (item) => {
-        //     console.log(item[orderBy]);
+        //     console.log('lodash', item[orderBy]);
         //     return item[orderBy]
         // }, order);
 
-        const items = sorted.map((item)=>{
-            return <List data={ item } key={ item.id } orderBy={ this.state.orderBy } />
+        const items = sorted.map((item) => {
+            return <List data={item}
+                         key={item.id}
+                         orderBy={this.state.orderBy}
+            />
         });
+        console.log('items', items);
         return (
           <div className="container">
-              <div className="row">
-                  <div className="col-sm-8 col-sm-offset-2">
-                      <div className="clearfix">
-                          <Dropdawn toggle={ this.toggle }
-                                    dropdownActive={ this.state.dropdownActive }
-                                    doOrderBy={ this.doOrderBy }
-                                    doOrder={ this.doOrder }
-                                    orderBy={ this.state.orderBy }
-                                    order={ this.state.order } />
-                      </div>
-                      { items }
-                  </div>
-              </div>
+              <Dropdawn toggle={this.toggle}
+                        dropdownActive={this.state.dropdownActive}
+                        doOrderBy={this.doOrderBy}
+                        doOrder={this.doOrder}
+                        orderBy={this.state.orderBy}
+                        order={this.state.order}/>
+                        {items}
           </div>
         );
     }

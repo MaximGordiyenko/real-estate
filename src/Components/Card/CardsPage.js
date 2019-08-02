@@ -5,16 +5,37 @@ import Carousel from "../Carousel/Carousel";
 import data from "../../api/movies";
 import style from '../../css/CardsPage.module.css'
 import ScrollButton from "../ScrollButton";
-import Sort from "../Sort";
 
 class CardsPage extends Component {
     state = {
         filter: '',
         data: data,
         currentPage: 1,
-        cardsPerPage: 10
+        cardsPerPage: 10,
+        // sortValue: data
+    };
+    //EDIT
+    handleSort = ascending => {
+        this.setState( {
+            sortValue: ascending
+              ? this.state.data.sort((a,b) => (parseFloat(a.price) - parseFloat(b.price)))
+              : this.state.data.sort((a,b) => (parseFloat(b.price) - parseFloat(a.price)))
+        } )
     };
 
+    sortByPriceAsc() {
+        const sortedPrice = data.map(item => Number(item.price.substr(1).replace(/[ ,.]/g, ''))).sort((a, b) => (b - a));
+        this.setState({
+            data: this.state.data.sort((a, b) => (a.price - b.price))
+        });
+    }
+
+    sortByPriceDesc() {
+        this.setState({
+            data: this.state.data.map(item => Number(item.price.substr(1).replace(/[ ,.]/g, ''))).sort((a, b) => (b - a))
+        });
+    }
+    //END EDIT
     handlePagination = event => {
         this.setState({
             currentPage: Number(event.target.id)
@@ -30,6 +51,19 @@ class CardsPage extends Component {
 
     render() {
         const {data, currentPage, cardsPerPage} = this.state;
+        //EDIT
+        const newstr = data.map(item => Number(item.price.substr(1).replace(/[ ,.]/g, ''))).sort((a, b) => (b - a));
+        console.log(newstr);
+        let obj = [...this.state.data];
+        console.log('obj', obj);
+        obj.sort((a, b) => a.price - b.price);
+        console.log('obj sored', obj);
+        obj.map((item, i) => (<div key={i}> {item.id}
+            {item.price} {item.description}</div>));
+        let sortValue = 1 < 0 ? this.state.data.sort((a,b) => (parseFloat(a.price) - parseFloat(b.price)))
+          : this.state.data.sort((a,b) => (parseFloat(b.price) - parseFloat(a.price)))
+        console.log(sortValue);
+        //END EDIT
         const indexOfLastTodo = currentPage * cardsPerPage;
         const indexOfFirstTodo = indexOfLastTodo - cardsPerPage;
         const currentItems = data.map(item => item).slice(indexOfFirstTodo, indexOfLastTodo);
@@ -61,9 +95,16 @@ class CardsPage extends Component {
                           handleFilter={this.handleFilter}
 
               />
-              {/*<Sort/>*/}
+
+              {/*EDIT*/}
+              {/*<div>*/}
+              {/*    <button onClick={this.handleSort(true)}>sortByPriceAsc</button>*/}
+              {/*    <button onClick={this.handleSort(false)}>sortByPriceDesc</button>*/}
+              {/*</div>*/}
+              {/*END EDIT*/}
+
               <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
-              <CardList movies={filterByTitle(filter)}
+              <CardList data={filterByTitle(filter)}
                         match={this.props.match}
               />
               <div className={style.centerPagination}>
