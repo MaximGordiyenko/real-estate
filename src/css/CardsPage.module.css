@@ -26,3 +26,11 @@
 }
 
 .pagination .listPagination:hover:not(.active) {background-color: #ddd;}
+
+.btnWrapper{
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2% 0;
+}
+

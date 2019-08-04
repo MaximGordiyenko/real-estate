@@ -4,6 +4,7 @@ import style from '../../css/CardList.module.css';
 import Card from "./Card";
 
 const CardList = ({data, match}) => {
+    console.log(match);
     return (
       <>
           <div className={style.list}>

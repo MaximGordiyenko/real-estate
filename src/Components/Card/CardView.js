@@ -1,8 +1,10 @@
 import React from 'react';
 import style from "../../css/CardView.module.css";
 import movies from "../../api/movies";
+import PreOrder from "../PreOrder";
 
 const CardView = ({match}) => {
+    console.log('match', match);
     let matchId = Number(Object.values(match.params));
     const itemList = movies.map(e => e);
     let found_object = null;
@@ -30,6 +32,7 @@ const CardView = ({match}) => {
               </div>
 
               <p>{location}</p>
+              <PreOrder/>
           </div>
       </div>
     )

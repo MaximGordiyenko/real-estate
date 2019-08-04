@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import data from '../../api/movies';
 import style from "../../css/Carousel.module.css";
 import CarouselItem from "./CarouselItem";
+import {Link} from 'react-router-dom';
 
 class Carousel extends Component {
     constructor(props) {
@@ -48,11 +49,16 @@ class Carousel extends Component {
                       <div className={style.cardsSliderWrapper} style={{
                           'transform': `translateX( - ${this.state.index * (100 / this.state.data.length)}%)`
                       }}>
-                          {keys.map(property =>
-                            <CarouselItem key={property.id}
-                                          property={property}
-                            />
-                          )}
+                          {keys.map(property => (
+                            <Link to={``}
+                                  key={property.id}
+                            >
+                                <CarouselItem
+                                  property={property}
+                                  match={this.props.match}
+                                />
+                            </Link>
+                          ))}
                       </div>
                   </div>
               </div>

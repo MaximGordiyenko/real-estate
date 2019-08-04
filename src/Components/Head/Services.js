@@ -1,94 +1,99 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import services from '../../api/investors';
+import {Link, Route, Switch} from 'react-router-dom';
+import investors from '../../api/investors';
 import occupiers from '../../api/occupiers';
 import specialties from '../../api/specialties';
 import sectors from '../../api/sectors';
 import style from '../../css/Services.module.css';
+import Investors from "./Investors";
 
-const Services = () => (
-  <section className={style.container}>
+const Services = ({match}) => {
+    console.log(match);
+    return (
+      <section className={style.container}>
 
-      <section className={style.item}>
-          <header className={style.header}>
-              <span className={style.iconInvestor}> </span>
-              <h1>Services for Investors</h1>
-          </header>
-          <article>
-              <ul className={style.unsortedList}>
-                  {services.map((service, index) =>
-                    <li className={style.list}
-                        key={index}>
-                        <Link className={style.link}
-                              to={''}>
-                            {service}
-                        </Link>
-                    </li>
-                  )}
-              </ul>
-          </article>
+          <section className={style.item}>
+              <header className={style.header}>
+                  <span className={style.iconInvestor}> </span>
+                  <h1>Services for Investors</h1>
+              </header>
+              <article>
+                  <ul className={style.unsortedList}>
+                      {investors.map(({id, title}) =>
+                        <li className={style.list}
+                            key={id}>
+                            <Link className={style.link}
+                                  to={`${match.url}/${id}`}>
+                                {title} {id}
+                            </Link>
+                        </li>
+                      )}
+                  </ul>
+              </article>
+          </section>
+          <section className={style.item}>
+              <header className={style.header}>
+                  <span className={style.iconOccupies}> </span>
+                  <h1>Services for Occupiers</h1>
+              </header>
+              <article>
+                  <ul className={style.unsortedList}>
+                      {occupiers.map((service, index) =>
+                        <li className={style.list}
+                            key={index}>
+                            <Link className={style.link}
+                                  to={''}>
+                                {service}
+                            </Link>
+                        </li>
+                      )}
+                  </ul>
+              </article>
+          </section>
+          <section className={style.item}>
+              <header className={style.header}>
+                  <span className={style.iconSpecialist}> </span>
+                  <h1>Asset Types & Specialties</h1>
+              </header>
+              <article>
+                  <ul className={style.unsortedList}>
+                      {specialties.map((service, index) =>
+                        <li className={style.list}
+                            key={index}>
+                            <Link className={style.link}
+                                  to={''}>
+                                {service}
+                            </Link>
+                        </li>
+                      )}
+                  </ul>
+              </article>
+          </section>
+          <section className={style.item}>
+              <header className={style.header}>
+                  <span className={style.iconIndustry}> </span>
+                  <h1>Industry Sectors</h1>
+              </header>
+              <article>
+                  <ul className={style.unsortedList}>
+                      {sectors.map((service, index) =>
+                        <li className={style.list}
+                            key={index}>
+                            <Link className={style.link}
+                                  to={''}>
+                                {service}
+                            </Link>
+                        </li>
+                      )}
+                  </ul>
+              </article>
+          </section>
+          <Switch>
+              <Route exact path={`${match.path}/:id`} component={Investors}/>
+              {/*<Route path={`/services/:id`} render={(routeProps) => <Investors {...routeProps} />}/>*/}
+          </Switch>
       </section>
-
-      <section className={style.item}>
-          <header className={style.header}>
-              <span className={style.iconOccupies}> </span>
-              <h1>Services for Occupiers</h1>
-          </header>
-          <article>
-              <ul className={style.unsortedList}>
-                  {occupiers.map((service, index) =>
-                    <li className={style.list}
-                        key={index}>
-                        <Link className={style.link}
-                              to={''}>
-                            {service}
-                        </Link>
-                    </li>
-                  )}
-              </ul>
-          </article>
-      </section>
-
-      <section className={style.item}>
-          <header className={style.header}>
-              <span className={style.iconSpecialist}> </span>
-              <h1>Asset Types & Specialties</h1>
-          </header>
-          <article>
-              <ul className={style.unsortedList}>
-                  {specialties.map((service, index) =>
-                    <li className={style.list}
-                        key={index}>
-                        <Link className={style.link}
-                              to={''}>
-                            {service}
-                        </Link>
-                    </li>
-                  )}
-              </ul>
-          </article>
-      </section>
-
-      <section className={style.item}>
-          <header className={style.header}>
-              <span className={style.iconIndustry}> </span>
-              <h1>Industry Sectors</h1>
-          </header>
-          <article>
-              <ul className={style.unsortedList}>
-                  {sectors.map((service, index) =>
-                    <li className={style.list}
-                        key={index}>
-                        <Link className={style.link}
-                              to={''}>
-                            {service}
-                        </Link>
-                    </li>
-                  )}
-              </ul>
-          </article>
-      </section>
-  </section>
-);
+    );
+};
 
 export default Services;
