@@ -1,22 +1,11 @@
 import React from 'react';
-import investors from "../../api/investors";
+import style from '../../css/Investors.module.css'
 
-const Investors = ({match}) => {
+const Investors = ({match ,title}) => {
     console.log(match);
-    let matchId = Number(Object.values(match.params));
-    const itemList = investors.map(e => e);
-    let found_object = null;
-    itemList.forEach((item) => {
-        if (item.id === matchId) {
-            found_object = item;
-        }
-    });
-    const {title} = found_object;
-
     return (
       <div className="">
-          <h3>{match.params.id}</h3>
-          <h3>{title}</h3>
+          <p className={style.title}>{title}</p>
       </div>
     );
 };

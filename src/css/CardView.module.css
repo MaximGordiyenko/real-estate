@@ -13,3 +13,20 @@
 .image {
     width: 100%;
 }
+
+.back {
+    text-decoration: none;
+    margin: 0 10px;
+    position: absolute;
+    top: 110px;
+    left: 5px;
+}
+
+.back:before {
+    content: '\203A';
+}
+
+.back:hover {
+    transform: scale(1.2);
+}
+

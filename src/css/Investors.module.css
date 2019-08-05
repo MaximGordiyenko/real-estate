@@ -1,0 +1,8 @@
+.title{
+    text-decoration: none;
+}
+.title:hover:before {
+    content: '\203A';
+    font-size: 30px;
+    text-decoration: none;
+}

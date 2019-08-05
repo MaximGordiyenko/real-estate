@@ -54,10 +54,6 @@ section section header span {
     text-decoration: none;
 }
 
-.list:hover:before{
-    content: '\203A';
-    font-size: 30px;
-}
 .link:active {
     color: #4CAF50;
 }
@@ -65,3 +61,4 @@ section section header span {
 .link:visited {
     color: #4CAF50;
 }
+

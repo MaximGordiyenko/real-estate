@@ -1,6 +1,6 @@
 .centerPagination {
     text-align: center;
-    background: #8b0000;
+    background: rgb(36, 36, 36);
 }
 
 .pagination {
@@ -9,7 +9,7 @@
 }
 
 .pagination .listPagination {
-    color: black;
+    color: white;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -17,18 +17,20 @@
     border: 1px solid #ddd;
     margin: 0 4px;
     list-style-type: none;
+    border-radius: 25px;
 }
 
 .pagination .listPagination .active {
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid #4CAF50;
+    /*color: white;*/
 }
 
-.pagination .listPagination:hover:not(.active) {background-color: #ddd;}
+.pagination .listPagination:hover:not(.active) {
+    background-color: #ddd;
+    color: #282c34;
+}
 
-.btnWrapper{
-    background: black;
+.btnWrapper {
+    background: rgb(36, 36, 36);
     display: flex;
     justify-content: space-evenly;
     padding: 2% 0;

@@ -4,7 +4,7 @@ import style from '../../css/SortButton.module.css';
 const SortButtonID = ({handler, isSort}) => {
     return (
       <div className={style.wrapper}>
-          <button className='btn btn-light btn-sm'
+          <button className='btn btn-outline-light btn-sm'
             type="button"
             onClick={handler}>
               {isSort ? "ID Asc" : 'ID Desc'}

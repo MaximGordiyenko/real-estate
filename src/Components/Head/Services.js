@@ -23,8 +23,9 @@ const Services = ({match}) => {
                         <li className={style.list}
                             key={id}>
                             <Link className={style.link}
-                                  to={`${match.url}/${id}`}>
-                                {title} {id}
+                                  to={`/services/${id}`}><Investors match={match}
+                                                                    title={title}/>
+                                {/*{title} {id}*/}
                             </Link>
                         </li>
                       )}
@@ -89,8 +90,7 @@ const Services = ({match}) => {
               </article>
           </section>
           <Switch>
-              <Route exact path={`${match.path}/:id`} component={Investors}/>
-              {/*<Route path={`/services/:id`} render={(routeProps) => <Investors {...routeProps} />}/>*/}
+              <Route exact path={`/services/`} component={Investors}/>
           </Switch>
       </section>
     );
