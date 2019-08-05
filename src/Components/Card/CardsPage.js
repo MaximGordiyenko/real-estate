@@ -7,7 +7,7 @@ import style from '../../css/CardsPage.module.css'
 import ScrollButton from "../Buttons/ScrollButton";
 import SortButtonID from "../Buttons/SortButtonID";
 import SortButtonPrice from "../Buttons/SortButtonPrice";
-
+import Social from "../Social/Social";
 
 const dataParser = ({...obj}, {...callbacks}) => {
     let result = {};
@@ -120,6 +120,7 @@ class CardsPage extends Component {
                       {renderPageNumbers}
                   </ul>
               </div>
+              <Social/>
           </>
         );
     }

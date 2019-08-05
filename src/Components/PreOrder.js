@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
 import style from '../css/PreOrder.module.css';
 
-const isLogged = false;
-
-const INITIAL_STATE = {
-    fullname: "",
-    email: "",
-    phone: "",
-};
-
 class PreOrder extends Component {
-    state = {...INITIAL_STATE};
+    state = {
+        fullname: "",
+        email: "",
+        phone: "",
+    };
 
     onChangefullname = (e) => {
         this.setState({
@@ -37,7 +33,7 @@ class PreOrder extends Component {
               <div>
                   <h4>Online Pre-Order</h4>
                   <div className={style.wrapper}>
-                      <form action="/register"
+                      <form action="#"
                             method="POST"
                             onSubmit={this.onSubmit}
                       >
@@ -80,12 +76,11 @@ class PreOrder extends Component {
                                      onChange={this.onChangePhone}
                               />
                           </div>
-
-                          {!isLogged ?
-                            <button type="submit" className="btn btn-primary">Log In</button>
-                            :
-                            <button type="submit" className="btn btn-primary">Log Out</button>
-                          }
+                          <button type="submit"
+                                  disabled={!this.state.fullname && !this.state.email && !this.state.phone}
+                                  className="btn btn-primary">
+                              Post
+                          </button>
                       </form>
                   </div>
               </div>

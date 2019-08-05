@@ -1,0 +1,54 @@
+.wrapper {
+    background: rgb(36, 36, 36);
+    padding: 50px 0;
+}
+
+.policy {
+    display: flex;
+    justify-content: space-around;
+}
+
+.span {
+    color: #61DAFB;
+    font-size: 15px;
+}
+
+.socialContainer {
+
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.social:hover {
+    transform: translateY(-2px);
+}
+
+.youtube {
+    color: #eb3223;
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+.facebook {
+    color: #4968ad;
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+.twitter {
+    color: #49a1eb;
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+.instagram {
+    color: black;
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
