@@ -4,15 +4,60 @@ import CardList from "./CardList";
 import Carousel from "../Carousel/Carousel";
 import data from "../../api/movies";
 import style from '../../css/CardsPage.module.css'
-import ScrollButton from "../ScrollButton";
-import Sort from "../Sort";
+import ScrollButton from "../Buttons/ScrollButton";
+import SortButtonID from "../Buttons/SortButtonID";
+import SortButtonPrice from "../Buttons/SortButtonPrice";
+import Social from "../Social/Social";
+
+const dataParser = ({...obj}, {...callbacks}) => {
+    let result = {};
+    for (let i in obj) {
+        let name = i;
+        let val = obj[i];
+        let callb = callbacks[name];
+        result[`${name}`] = callb ? callb(val) : val;
+    }
+    return result
+};
+
+let callbacks = {
+    price: (n) => Number(n.replace(/[^0-9.-]+/g, ""))
+};
+
+let datas = data.map(i => dataParser(i, callbacks));
+
+const sortDown = (arr, value, isSort = true) => isSort ?
+  arr.sort(
+    (a, b) => (a[value] > b[value]) ? 1 : ((b[value] > a[value]) ? -1 : 0))
+  : arr.sort(
+    (a, b) => (a[value] <= b[value]) ? 1 : ((b[value] <= a[value]) ? -1 : 0)
+  );
 
 class CardsPage extends Component {
     state = {
         filter: '',
         data: data,
         currentPage: 1,
-        cardsPerPage: 10
+        cardsPerPage: 10,
+        isSort: false
+    };
+
+    sortByID = () => {
+        const {isSort} = this.state;
+        console.log(isSort);
+        this.setState(prevState => ({
+            data: sortDown(datas, "id", isSort),
+            isSort: !prevState.isSort
+        }));
+    };
+
+    sortByPrice = () => {
+        const {isSort} = this.state;
+        console.log(isSort);
+        this.setState(prevState => ({
+            data: sortDown(datas, "price", isSort),
+            isSort: !prevState.isSort
+        }));
     };
 
     handlePagination = event => {
@@ -21,7 +66,6 @@ class CardsPage extends Component {
         });
     };
 
-
     handleFilter = event => {
         this.setState({
             filter: event.target.value,
@@ -29,7 +73,7 @@ class CardsPage extends Component {
     };
 
     render() {
-        const {data, currentPage, cardsPerPage} = this.state;
+        const {data, currentPage, cardsPerPage, isSort, filter} = this.state;
         const indexOfLastTodo = currentPage * cardsPerPage;
         const indexOfFirstTodo = indexOfLastTodo - cardsPerPage;
         const currentItems = data.map(item => item).slice(indexOfFirstTodo, indexOfLastTodo);
@@ -48,12 +92,9 @@ class CardsPage extends Component {
               </li>
             );
         });
-
         const filterByTitle = (item) =>
           currentItems.filter(movies =>
             movies.title.toLocaleLowerCase().includes(item.toLowerCase()));
-
-        const {filter} = this.state;
         return (
           <>
               <Carousel/>
@@ -61,9 +102,17 @@ class CardsPage extends Component {
                           handleFilter={this.handleFilter}
 
               />
-              {/*<Sort/>*/}
+              <div className={style.btnWrapper}>
+                  <SortButtonID handler={() => this.sortByID()}
+                                isSort={isSort}
+                  />
+                  <SortButtonPrice handler={() => this.sortByPrice()}
+                                   isSort={isSort}
+                  />
+              </div>
+
               <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
-              <CardList movies={filterByTitle(filter)}
+              <CardList data={filterByTitle(filter)}
                         match={this.props.match}
               />
               <div className={style.centerPagination}>
@@ -71,9 +120,11 @@ class CardsPage extends Component {
                       {renderPageNumbers}
                   </ul>
               </div>
+              <Social/>
           </>
         );
     }
 }
 
 export default CardsPage;
+

@@ -1,33 +1,29 @@
 .carousel {
-    text-align: center;
     position: relative;
-    padding-bottom: 55px;
+}
+
+.prevBnt, .nextBtn {
+    position: absolute;
+    top: calc(100% - 340px);
+    color: #009688;
+    z-index: 3;
+    font-size: 200px;
+    background: none;
+    border: none;
 }
 
 .prevBnt {
-    width: 50px;
-    height: 280px;
-    position: absolute;
-    top: calc(100% - 300px);
-    left: 20px;
-    color: black;
-    z-index: 3;
-    border-radius: 10px;
+    left: 50px;
 }
 
 .nextBtn {
-    width: 50px;
-    height: 280px;
-    position: absolute;
-    top: calc(100% - 300px);
-    right: 20px;
-    color: black;
-    z-index: 3;
-    border-radius: 10px;
+    right: 50px;
 }
-.nextBtn:hover{
-    background: blueviolet;
+
+.nextBtn:hover, .nextBtn:hover {
+
 }
+
 .cards-slider-wrapper {
     display: flex;
     position: absolute;
@@ -381,14 +377,15 @@
 }
 
 .col {
-    height: 264px;
+    height: 350px;
     position: relative;
+    background: rgb(36, 36, 36);
 }
 
 .col:before, .col:after {
     content: '';
     display: block;
-    width: 50%;
+    /*width: calc(50% - 10vw);*/
     height: 120%;
     background: linear-gradient(to right, white 15%, rgba(255, 255, 255, 0) 100%);
     position: absolute;

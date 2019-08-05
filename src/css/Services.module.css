@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+}
+
+section section header span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.iconInvestor {
+    background-size: auto 100%;
+    background: url(../assets/inv.svg) no-repeat;
+}
+
+.iconOccupies {
+    background-size: auto 100%;
+    background: url(../assets/occupies.svg) no-repeat;
+}
+
+.iconSpecialist {
+    background-size: auto 100%;
+    background: url(../assets/spec.svg) no-repeat;
+}
+
+.iconIndustry {
+    background-size: auto 100%;
+    background: url(../assets/industry.svg) no-repeat;
+}
+
+.unsortedList {
+    display: grid;
+    grid-template-columns: repeat(3, 34%);
+    grid-template-rows: repeat(7, 50px);
+}
+
+.item {
+    margin: auto;
+}
+
+.list {
+    list-style-type: none;
+    align-self: center;
+}
+
+.link {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.link:active {
+    color: #4CAF50;
+}
+
+.link:visited {
+    color: #4CAF50;
+}
+

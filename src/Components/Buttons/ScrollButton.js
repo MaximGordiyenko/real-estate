@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import style from '../css/ScrollButton.module.css';
+import style from '../../css/ScrollButton.module.css';
 
 class ScrollButton extends Component {
     state = {
