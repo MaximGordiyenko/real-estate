@@ -15,12 +15,12 @@ class CommentBox extends Component {
         ]
     };
 
-    componentDidMount() {
-        const getData = JSON.parse(localStorage.getItem("data"));
-        this.setState({
-            data: getData
-        });
-    }
+    // componentDidMount() {
+    //     const getData = JSON.parse(localStorage.getItem("data"));
+    //     this.setState({
+    //         data: getData
+    //     });
+    // }
 
     handleSubmit = (e) => {
         e.preventDefault();
