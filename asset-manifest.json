@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/real-estate/static/css/main.9c8e9deb.chunk.css",
-    "main.js": "/real-estate/static/js/main.28542046.chunk.js",
-    "main.js.map": "/real-estate/static/js/main.28542046.chunk.js.map",
-    "runtime-main.js": "/real-estate/static/js/runtime-main.389f4455.js",
-    "runtime-main.js.map": "/real-estate/static/js/runtime-main.389f4455.js.map",
-    "static/js/2.c46db43f.chunk.js": "/real-estate/static/js/2.c46db43f.chunk.js",
-    "static/js/2.c46db43f.chunk.js.map": "/real-estate/static/js/2.c46db43f.chunk.js.map",
+    "main.css": "/real-estate/static/css/main.9be90e40.chunk.css",
+    "main.js": "/real-estate/static/js/main.ca8120a5.chunk.js",
+    "main.js.map": "/real-estate/static/js/main.ca8120a5.chunk.js.map",
+    "runtime-main.js": "/real-estate/static/js/runtime-main.0e90acd8.js",
+    "runtime-main.js.map": "/real-estate/static/js/runtime-main.0e90acd8.js.map",
+    "static/js/2.65731ecc.chunk.js": "/real-estate/static/js/2.65731ecc.chunk.js",
+    "static/js/2.65731ecc.chunk.js.map": "/real-estate/static/js/2.65731ecc.chunk.js.map",
     "index.html": "/real-estate/index.html",
-    "precache-manifest.4f1cb277298198ba9d6236c2578ce932.js": "/real-estate/precache-manifest.4f1cb277298198ba9d6236c2578ce932.js",
+    "precache-manifest.c1155d5e9cedab7f77e7ded98365d801.js": "/real-estate/precache-manifest.c1155d5e9cedab7f77e7ded98365d801.js",
     "service-worker.js": "/real-estate/service-worker.js",
-    "static/css/main.9c8e9deb.chunk.css.map": "/real-estate/static/css/main.9c8e9deb.chunk.css.map",
-    "static/js/2.c46db43f.chunk.js.LICENSE.txt": "/real-estate/static/js/2.c46db43f.chunk.js.LICENSE.txt",
-    "static/media/CarouselItem.module.css": "/real-estate/static/media/map.532f350e.svg",
+    "static/css/main.9be90e40.chunk.css.map": "/real-estate/static/css/main.9be90e40.chunk.css.map",
+    "static/js/2.65731ecc.chunk.js.LICENSE.txt": "/real-estate/static/js/2.65731ecc.chunk.js.LICENSE.txt",
+    "static/media/CarouselItem.module.css": "/real-estate/static/media/map.03610ae0.svg",
     "static/media/Services.module.css": "/real-estate/static/media/spec.f963968a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.389f4455.js",
-    "static/js/2.c46db43f.chunk.js",
-    "static/css/main.9c8e9deb.chunk.css",
-    "static/js/main.28542046.chunk.js"
+    "static/js/runtime-main.0e90acd8.js",
+    "static/js/2.65731ecc.chunk.js",
+    "static/css/main.9be90e40.chunk.css",
+    "static/js/main.ca8120a5.chunk.js"
   ]
 }
