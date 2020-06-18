@@ -26,17 +26,17 @@ class CommentBox extends Component {
         e.preventDefault();
         const {data} = this.state;
         const authorVal = e.target[0].value.trim();
-        console.log(authorVal);
+        // console.log(authorVal);
         const textVal = e.target[1].value.trim();
-        console.log(textVal);
+        // console.log(textVal);
         if (!textVal || !authorVal) {
             return;
         }
 
         const comments = {author: authorVal, text: textVal};
-        console.log(comments);
+        // console.log(comments);
         const newComments = data.concat([comments]);
-        console.log(newComments);
+        // console.log(newComments);
         this.setState({
             data: newComments
         });
@@ -51,7 +51,7 @@ class CommentBox extends Component {
     };
 
     render() {
-        console.log(this.state.data);
+        // console.log(this.state.data);
         return (
           <section className="comment-box">
               <header className="pt-4 pb-2 pl-2">

@@ -1,15 +1,10 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import style from '../../css/Social.module.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faYoutube,
-    faFacebook,
-    faTwitter,
-    faInstagram
-} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faFacebook, faInstagram, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 
- function Social() {
+function Social() {
     return (
       <div className={style.wrapper}>
           <div className={style.socialContainer}>

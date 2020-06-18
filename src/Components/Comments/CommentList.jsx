@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from "./Comment";
 
 const CommentList = ({data}) => {
-    console.log("comment list", data);
+    // console.log("comment list", data);
     return (
       <div className="comment-list">
           {data.map((c, index) => {
