@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import style from '../css/PreOrder.module.css';
+import style from './PreOrder.module.css';
 
 class PreOrder extends Component {
     state = {

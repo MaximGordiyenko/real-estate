@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import style from "../../css/CardView.module.css";
 import movies from "../../api/movies";
-import PreOrder from "../PreOrder";
+import PreOrder from "../Preorder/PreOrder";
 import CommentBox from "../Comments/CommentBox";
 // import NewPost from "../Post/NewPost";
 // import ocean from '../../assets/poster/1500-Ocean-DR.jpg'

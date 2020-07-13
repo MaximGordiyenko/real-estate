@@ -26,7 +26,6 @@ class Carousel extends Component {
     const item = this.state.data[this.state.index];
     let keys = [];
     keys.push(item);
-    console.log("this.props.match:", this.props.match);
     return (
       <div className={style.carousel}>
         <button className={style.prevBnt}

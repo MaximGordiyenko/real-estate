@@ -1,77 +1,77 @@
 import mongoose from 'mongoose';
 
 const CardsSchema = new mongoose.Schema({
-  card_id: {
+  id: {
     type: Number,
-    require: true
+    // require: true
   },
   title: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   description: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
-  img: {
-    data: Buffer,
-    contentType: String
+  image: {
+    type: String,
+    //required: true,
   },
   releaseDate: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   location: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   price: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   trailerPath: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   city: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   address: {
     type: String,
-    required: true,
+    //required: true,
     trim: true
   },
   latitude: {
     type: Number,
-    required: true,
+    //required: true,
   },
   longitude: {
     type: Number,
-    required: true,
+    //required: true,
   },
   bedrooms: {
     type: Number,
-    required: true,
+    //required: true,
   },
   bathrooms: {
     type: Number,
-    required: true,
+    //required: true,
   },
   carSpaces: {
     type: Number,
-    required: true,
+    //required: true,
   },
   favorite: {
-    type: Boolean,
-    required: true,
+    type: String,
+    //required: true,
   },
 });
 

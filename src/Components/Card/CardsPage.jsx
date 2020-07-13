@@ -8,6 +8,7 @@ import ScrollButton from "../Buttons/ScrollButton";
 import SortButtonID from "../Buttons/SortButtonID";
 import SortButtonPrice from "../Buttons/SortButtonPrice";
 import Social from "../Social/Social";
+const axios = require('axios');
 
 const dataParser = ({...obj}, {...callbacks}) => {
   let result = {};
@@ -37,10 +38,29 @@ class CardsPage extends Component {
   state = {
     filter: '',
     data: data,
+    data1: [],
     currentPage: 1,
     cardsPerPage: 10,
-    isSort: false
+    isSort: false,
+    users: []
   };
+
+  componentDidMount = () => {
+    this.getDataFromDB();
+  }
+
+  getDataFromDB = () => {
+    axios.get('http://localhost:4000/main')
+      .then(res => {
+        const mydata = res.data.data;
+        this.setState({
+          data: mydata
+        })
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
 
   sortByID = () => {
     const {isSort} = this.state;
@@ -74,6 +94,8 @@ class CardsPage extends Component {
 
   render() {
     const {data, currentPage, cardsPerPage, isSort, filter} = this.state;
+    console.log(this.state.data1);
+    console.log(this.state.data);
     const indexOfLastTodo = currentPage * cardsPerPage;
     const indexOfFirstTodo = indexOfLastTodo - cardsPerPage;
     const currentItems = data.map(item => item).slice(indexOfFirstTodo, indexOfLastTodo);

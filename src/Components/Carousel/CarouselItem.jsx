@@ -2,7 +2,6 @@ import React from 'react';
 import style from '../../css/CarouselItem.module.css';
 
 const CarouselItem = ({property, match}) => {
-  console.log("match:", match, "property:", property);
   const {id, image, city, address, bedrooms, bathrooms, carSpaces, latitude, longitude} = property;
   return (
     <div id={`card-${id}`} className={style.card}>
